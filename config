@@ -10,7 +10,7 @@ then
     then
         STREAM_MODULES="ngx_stream_ssl_ja3_preread_module $STREAM_MODULES"
         NGX_ADDON_SRCS="$NGX_ADDON_SRCS                           \
-         $ngx_addon_dir/src/ngx_stream_ssl_ja3_preread_module.c"
+         $ngx_addon_dir/src/ngx_stream_ssl_ja3_preread_module.cpp"
         echo " + ngx_ssl_ja3: stream support"
     fi
 fi
@@ -20,8 +20,8 @@ HTTP_MODULES="$HTTP_MODULES ngx_http_ssl_ja3_module"
 CORE_INCS="$CORE_INCS $ngx_module_incs"
 
 NGX_ADDON_SRCS="$NGX_ADDON_SRCS                         \
- $ngx_addon_dir/src/ngx_ssl_ja3.c                       \
- $ngx_addon_dir/src/ngx_http_ssl_ja3_module.c
+ $ngx_addon_dir/src/ngx_ssl_ja3.cpp                     \
+ $ngx_addon_dir/src/ngx_http_ssl_ja3_module.cpp
  "
 
 CORE_LIBS="$CORE_LIBS"
